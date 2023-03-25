@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="1" failures="0" name="org.example.AppTest" time="0.003" errors="0" skipped="0">
+  <properties>
+    <property name="idea.version" value="2022.3.2"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="java.vm.version" value="19.0.2+7-FR"/>
+    <property name="sun.boot.library.path" value="C:\Users\Flavius\.jdks\corretto-19.0.2\bin"/>
+    <property name="user.country.format" value="RO"/>
+    <property name="maven.multiModuleProjectDirectory" value="D:\PT2023_30226_Medvichi_Flavian_Assignment_1\PT2023_30226_Medvichi_Flavian_Assignment_1"/>
+    <property name="java.vm.vendor" value="Amazon.com Inc."/>
+    <property name="java.vendor.url" value="https://aws.amazon.com/corretto/"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="path.separator" value=";"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="D:\PT2023_30226_Medvichi_Flavian_Assignment_1\PT2023_30226_Medvichi_Flavian_Assignment_1"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="java.runtime.version" value="19.0.2+7-FR"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\Flavius\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="maven.ext.class.path" value="D:\Folder nou\IntelliJ IDEA 2022.3.2\plugins\maven\lib\maven-event-listener.jar"/>
+    <property name="classworlds.conf" value="D:\Folder nou\IntelliJ IDEA 2022.3.2\plugins\maven\lib\maven3\bin\m2.conf"/>
+    <property name="sun.jnu.encoding" value="Cp1250"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="C:\Users\Flavius\.jdks\corretto-19.0.2\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:\VMware\bin\;C:\Program Files\Eclipse Adoptium\jdk-11.0.16.8-hotspot\bin;C:\Program Files\Eclipse Adoptium\jdk-17.0.4.8-hotspot\bin;C:\Program Files (x86)\Eclipse Adoptium\jdk-8.0.345.1-hotspot\bin;C:\Program Files\Eclipse Adoptium\jdk-8.0.345.1-hotspot\bin;C:\Program Files\Eclipse Adoptium\jre-8.0.345.1-hotspot\bin;C:\Program Files\Eclipse Adoptium\jre-17.0.4.8-hotspot\bin;C:\Program Files\Eclipse Adoptium\jre-11.0.16.8-hotspot\bin;C:\Program Files (x86)\Eclipse Adoptium\jre-8.0.345.1-hotspot\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\dotnet\;C:\Program Files\dotnet\;C:\Program Files (x86)\IVI Foundation\VISA\WinNT\Bin\;C:\Program Files\IVI Foundation\VISA\Win64\Bin\;C:\Program Files (x86)\IVI Foundation\VISA\WinNT\Bin;C:\Program Files\Git\cmd;D:\MatLab\bin;C:\Users\Flavius\AppData\Local\Microsoft\WindowsApps;;."/>
+    <property name="jansi.passthrough" value="true"/>
+    <property name="maven.conf" value="D:\Folder nou\IntelliJ IDEA 2022.3.2\plugins\maven\lib\maven3/conf"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="java.class.version" value="63.0"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.0"/>
+    <property name="user.home" value="C:\Users\Flavius"/>
+    <property name="user.timezone" value="Europe/Bucharest"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.specification.version" value="19"/>
+    <property name="user.name" value="Flavius"/>
+    <property name="java.class.path" value="D:\Folder nou\IntelliJ IDEA 2022.3.2\plugins\maven\lib\maven3\boot\plexus-classworlds-2.6.0.jar;D:\Folder nou\IntelliJ IDEA 2022.3.2\plugins\maven\lib\maven3\boot\plexus-classworlds.license"/>
+    <property name="java.vm.specification.version" value="19"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version=2022.3.2 test"/>
+    <property name="java.home" value="C:\Users\Flavius\.jdks\corretto-19.0.2"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language.format" value="ro"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.version" value="19.0.2"/>
+    <property name="native.encoding" value="Cp1250"/>
+    <property name="java.vendor" value="Amazon.com Inc."/>
+    <property name="sun.stderr.encoding" value="UTF-8"/>
+    <property name="maven.home" value="D:\Folder nou\IntelliJ IDEA 2022.3.2\plugins\maven\lib\maven3"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.version.date" value="2023-01-17"/>
+    <property name="java.vendor.url.bug" value="https://github.com/corretto/corretto-19/issues/"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="java.vendor.version" value="Corretto-19.0.2.7.1"/>
+    <property name="sun.stdout.encoding" value="UTF-8"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase classname="org.example.AppTest" name="testApp" time="0.003"/>
+</testsuite>

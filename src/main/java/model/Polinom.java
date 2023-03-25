@@ -1,4 +1,4 @@
-package org.example;
+package model;
 
 import javax.swing.*;
 import java.sql.SQLOutput;
@@ -51,22 +51,12 @@ public class Polinom {
             pol.put(exp, coef);
 
             verif = verif + verificare(exp,coef);
-            System.out.println(verif);
-            System.out.println("\n");
         }
         if(verif.equals(""))
             verif=verif+"0";
-
-
-            //StringBuilder s = new StringBuilder(verif);
-            //s.deleteCharAt(0);
         char car = verif.charAt(0);
         if(car == '+')
-          //  System.out.println("p");
             verif =verif.substring(1);
-
-
-
 
         if(!polinom.equals(verif))
             pol = null;
@@ -124,7 +114,6 @@ public class Polinom {
     public String toString(){
         String s = "";
         String verif = "";
-        //System.out.println(polinom);
         DecimalFormat df = new DecimalFormat("#.#");
         double coef=0;
         int exp=0;
@@ -132,59 +121,11 @@ public class Polinom {
             String monom="";
             coef = x.getValue();
             exp = x.getKey();
-            if(exp == 0){
-                if(coef != 0){
-                    if(coef>0){
-                        monom = monom + "+" + df.format(coef);
-                    }
-                    else{ monom = monom + df.format(coef);}
-                }
-            } else if (exp == 1) {
-                if(coef != 0){
-                    if(coef>0 ){
-                        if(coef==1){
-                            monom = monom + "+" + "x";
-                        }
-                        else{
-                            monom = monom + "+" + df.format(coef) + "x";}//aci ar trebui sa afiseze doar x fara 1 coef
-                        }
-                    else{
-                        if(coef==-1){
-                            monom = monom + "-" + "x";
-                        }
-                        else{
-                            monom = monom + df.format(coef) + "x";}//aci ar trebui sa afiseze doar x fara 1 coef
-                    }
-                }
-            }
-            else {
-                if(coef != 0){
-                    if(coef>0){
-                        if(coef==1){
-                            monom = monom + "+" + "x^" + exp;
-                        }
-                        else{
-                            monom = monom + "+" + df.format(coef) + "x" + "^" + exp;
-                        }
-                    }
-                    else{
-                        if(coef==-1){
-                            monom = monom + "-" + "x^" + exp;
-                        }
-                        else{
-                            monom = monom + df.format(coef) + "x" + "^" + exp;}
-                        }
-                }
-            }
+            monom = verificare(exp,coef);
             s = monom + s;
         }
         if(s.equals(""))
             s=s+"0";
-        else{
-            StringBuilder sb = new StringBuilder(s);
-            sb.deleteCharAt(0);
-            s = sb.toString();
-        }
         return s;
     }
 }

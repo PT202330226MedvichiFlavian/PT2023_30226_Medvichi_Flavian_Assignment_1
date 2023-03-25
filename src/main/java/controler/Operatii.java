@@ -1,15 +1,16 @@
-package org.example;
+package controler;
+
+import model.Polinom;
 
 import javax.swing.*;
 import java.util.Map;
-import java.util.SortedMap;
 
 
 public class Operatii {
 
     JFrame frame = new JFrame("JoptionPane Test");
     public Polinom adunare(Polinom a, Polinom b){
-        Polinom c = new Polinom("");
+        Polinom c = new Polinom("0");
         int e,d;
         double r;
         for (Integer ex : a.pol.keySet()) {
@@ -29,7 +30,7 @@ public class Operatii {
     }
 
     public Polinom scadere(Polinom a, Polinom b){
-        Polinom c = new Polinom("");
+        Polinom c = new Polinom("0");
         int e,d;
         double r;
         for (Integer ex : a.pol.keySet()) {
@@ -50,7 +51,7 @@ public class Operatii {
 
     public Polinom derivare(Polinom a)
     {
-        Polinom c = new Polinom("");
+        Polinom c = new Polinom("0");
         for(Map.Entry<Integer, Double> x: a.pol.entrySet()){
             if(x.getValue() != 0 && x.getKey() != 0){
                 c.pol.put(x.getKey()-1, (x.getKey())*x.getValue());
@@ -59,7 +60,7 @@ public class Operatii {
         return c;
     }
     public Polinom integrare(Polinom a){
-        Polinom c = new Polinom("");
+        Polinom c = new Polinom("0");
         for(Map.Entry<Integer,Double> x: a.pol.entrySet()){
             if(x.getKey() == 0)
             {
@@ -73,7 +74,7 @@ public class Operatii {
     }
 
     public Polinom inmultire(Polinom a, Polinom b){
-        Polinom c = new Polinom("");
+        Polinom c = new Polinom("0");
         for(Map.Entry<Integer,Double> x: a.pol.entrySet()){
             for(Map.Entry<Integer, Double> y: b.pol.entrySet())
             {
@@ -95,7 +96,7 @@ public class Operatii {
     {
         int exp = rank(a);
         double coef = 0.0;
-        Polinom rez = new Polinom("");
+        Polinom rez = new Polinom("0");
         for(Map.Entry<Integer, Double> x: a.pol.entrySet())
         {
             if(x.getKey()<=exp && x.getValue() != 0)
@@ -106,8 +107,6 @@ public class Operatii {
         }
 
         rez.pol.put(exp, coef);
-//        System.out.println();
-//        System.out.println("\n");
         return rez;
     }
     private int rank(Polinom a)//returneaza rank ul maxim la unui polinom
@@ -120,12 +119,13 @@ public class Operatii {
         }
         return max;
     }
-    public Polinom impartire(Polinom a, Polinom b){
-        Polinom c = new Polinom("");
-        Polinom d = new Polinom("");
-        Polinom rez = new Polinom("");
-        Polinom dif = new Polinom("");
-        Polinom x = new Polinom("");
+    public Polinom[] impartire(Polinom a, Polinom b){
+        Polinom c = new Polinom("0");
+        Polinom d = new Polinom("0");
+        Polinom[] v = new Polinom[2];
+        Polinom rez = new Polinom("0");
+        Polinom dif = new Polinom("0");
+        Polinom x = new Polinom("0");
         c=a;
         d=b;
         if(d.toString().equals("0"))
@@ -135,7 +135,9 @@ public class Operatii {
         else{
             if(rank(c) < rank(d))
             {
-                return rez;
+                v[0] = rez;
+                v[1] = rez;
+                return v;
             }
             else{
                 int ed = rank(d);
@@ -143,11 +145,7 @@ public class Operatii {
                 int ok = 1;
                 while(rank(c) >= rank(d) && ok == 1 ){
                     int ec = rank(c);
-
-
                     rez.pol.put(ec-ed,c.pol.get(ec)/d.pol.get(ed));
-                    //System.out.println(rez);
-                    //System.out.println("\n");
                     x = minim(rez);
                     dif = inmultire(d, x);
                     c = scadere(c, dif);
@@ -155,7 +153,9 @@ public class Operatii {
                         ok = 0;
                 }
             }
-            return rez;
+            v[0] = rez;
+            v[1] = c;
+            return v;
         }
     }
 }

@@ -1,5 +1,7 @@
-package org.example;
-import javax.swing.*;
+package controler;
+import view.Interfata;
+import model.Polinom;
+
 import java.awt.event.*;
 public class Controler {
 
@@ -70,7 +72,6 @@ public class Controler {
 
            }
        });
-
        this.view.inmultirea(new ActionListener() {
            @Override
            public void actionPerformed(ActionEvent e) {
@@ -98,18 +99,15 @@ public class Controler {
                    view.setRez("Date incorecte");
                }
                else {
-                   Polinom rez = op.impartire(p1, p2);
+                   Polinom[] rez = op.impartire(p1, p2);
                    if(p2.toString().equals("0"))
                    {
-                       //JOptionPane.showMessageDialog(view, "Nu se poate efectua impartirea la 0");
                        view.setRez("Error");
                    }
                    else{
-                       view.setRez(rez.toString());
+                       view.setRez(rez[0].toString() + " R:" + rez[1].toString());
                    }
                }
-
-
            }
        });
    }
